@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coinsafehub</title>
+  <link rel="stylesheet" href="../assets/css/styles.min.css" />
+</head>
+
+<body>
+  <!--  Body Wrapper -->
+  <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+    data-sidebar-position="fixed" data-header-position="fixed">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar">
+      <!-- Sidebar scroll-->
+      <div>
+        <div class="brand-logo d-flex align-items-center justify-content-between">
+          <a href="./index.html" class="text-nowrap logo-img">
+            <h4>Coinsafehub</h4>
+          </a>
+          <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+            <i class="ti ti-x fs-8"></i>
+          </div>
+        </div>
+        <!-- Sidebar navigation-->
+        <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+          <ul id="sidebarnav">
+            <li class="sidebar-item">
+            <a class="sidebar-link" href="./index.html" aria-expanded="false">
+              <iconify-icon icon="material-symbols:home-outline"></iconify-icon>
+              <span class="hide-menu">Home</span>
+            </a>
+            </li>
+            <li>
+              <span class="sidebar-divider lg"></span>
+            </li>
+            <li class="nav-small-cap">
+              <span class="hide-menu">TRADING</span>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./deposit.html" aria-expanded="false">
+                <iconify-icon icon="mdi:bank-transfer-in"></iconify-icon>
+                <span class="hide-menu">Deposit</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./withdraw.html" aria-expanded="false">
+                <iconify-icon icon="mdi:bank-transfer-out"></iconify-icon>
+                <span class="hide-menu">Withdrawal</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./transfer.html" aria-expanded="false">
+                <iconify-icon icon="mdi:send-circle-outline"></iconify-icon>
+                <span class="hide-menu">Transfer</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./wallet.html" aria-expanded="false">
+                <iconify-icon icon="mdi:wallet"></iconify-icon>
+                <span class="hide-menu">Connect Wallet</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./plans.html" aria-expanded="false">
+                <iconify-icon icon="mdi:clipboard-check-outline"></iconify-icon>
+                <span class="hide-menu">Plans</span>
+              </a>
+            </li>
+
+          </ul>
+        </nav> 
+        <!-- End Sidebar navigation -->
+      </div>
+      <!-- End Sidebar scroll-->
+    </aside>
+    <!--  Sidebar End -->
+    <!--  Main wrapper -->
+    <div class="body-wrapper">
+      <!--  Header Start -->
+      <header class="app-header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <ul class="navbar-nav">
+            <li class="nav-item d-block d-xl-none">
+              <a class="nav-link sidebartoggler " id="headerCollapse" href="javascript:void(0)">
+                <i class="ti ti-menu-2"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="javascript:void(0)">
+                <iconify-icon icon="solar:bell-linear" class="fs-6"></iconify-icon>
+                <div class="notification bg-primary rounded-circle"></div>
+              </a>
+            </li>
+          </ul>
+          <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
+            <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
+              <li class="nav-item dropdown">
+                <a class="nav-link " href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <img src="../assets/images/profile/user-1.jpg" alt="" width="35" height="35" class="rounded-circle">
+                </a>
+                <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
+                  <div class="message-body">
+                    <a href="./settings.html" class="d-flex align-items-center gap-2 dropdown-item">
+                      <i class="ti ti-user fs-6"></i>
+                      <p class="mb-0 fs-3">My Profile</p>
+                    </a>
+                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                      <i class="ti ti-mail fs-6"></i>
+                      <p class="mb-0 fs-3">My Account</p>
+                    </a>
+                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                      <i class="ti ti-list-check fs-6"></i>
+                      <p class="mb-0 fs-3">My Task</p>
+                    </a>
+                    <a href="./authentication-login.html" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!--  Header End -->
+      <div class="body-wrapper-inner">
+        <div class="container-fluid">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title fw-semibold mb-4">Withdraw into your prefed account</h5>
+              <div class="container my-5">
+                <div class="row gy-4">
+                  <!-- Withdrawal Option 1 -->
+                  <div class="col-lg-4 col-md-6">
+                    <div class="card bg-primary-subtle shadow-none w-100">
+                      <div class="card-body text-center">
+                        <div class="d-flex align-items-center justify-content-center gap-3 mb-3">
+                          <div class="rounded-circle-shape bg-primary px-3 py-2 rounded-pill">
+                            <iconify-icon icon="mdi:currency-usd" class="fs-4 text-white"></iconify-icon>
+                          </div>
+                          <h6 class="mb-0 fs-5 text-primary">Tether USDT (ERC20)</h6>
+                        </div>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#withdrawDetailsModal1">
+                          View Details
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Withdrawal Option 2 -->
+                  <div class="col-lg-4 col-md-6">
+                    <div class="card bg-secondary-subtle shadow-none w-100">
+                      <div class="card-body text-center">
+                        <div class="d-flex align-items-center justify-content-center gap-3 mb-3">
+                          <div class="rounded-circle-shape bg-secondary px-3 py-2 rounded-pill">
+                            <iconify-icon icon="mdi:currency-usd-circle-outline" class="fs-4 text-white"></iconify-icon>
+                          </div>
+                          <h6 class="mb-0 fs-5 text-secondary">Tether USDT (TRC20)</h6>
+                        </div>
+                        <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#withdrawDetailsModal2">
+                          View Details
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Withdrawal Option 3 -->
+                  <div class="col-lg-4 col-md-6">
+                    <div class="card bg-danger-subtle shadow-none w-100">
+                      <div class="card-body text-center">
+                        <div class="d-flex align-items-center justify-content-center gap-3 mb-3">
+                          <div class="rounded-circle-shape bg-danger px-3 py-2 rounded-pill">
+                            <iconify-icon icon="mdi:bank-transfer" class="fs-4 text-white"></iconify-icon>
+                          </div>
+                          <h6 class="mb-0 fs-5 text-danger">Bank Transfer</h6>
+                        </div>
+                        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#withdrawDetailsModal3">
+                          View Details
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Withdrawal Option 4 -->
+                  <div class="col-lg-6 col-md-6">
+                    <div class="card bg-dark-subtle shadow-none w-100">
+                      <div class="card-body text-center">
+                        <div class="d-flex align-items-center justify-content-center gap-3 mb-3">
+                          <div class="rounded-circle-shape bg-dark px-3 py-2 rounded-pill">
+                            <iconify-icon icon="mdi:ethereum" class="fs-4 text-white"></iconify-icon>
+                          </div>
+                          <h6 class="mb-0 fs-5 text-dark">Ethereum</h6>
+                        </div>
+                        <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#withdrawDetailsModal4">
+                          View Details
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Withdrawal Option 5 -->
+                  <div class="col-lg-6 col-md-6">
+                    <div class="card bg-warning-subtle shadow-none w-100">
+                      <div class="card-body text-center">
+                        <div class="d-flex align-items-center justify-content-center gap-3 mb-3">
+                          <div class="rounded-circle-shape bg-warning px-3 py-2 rounded-pill">
+                            <iconify-icon icon="mdi:bitcoin" class="fs-4 text-white"></iconify-icon>
+                          </div>
+                          <h6 class="mb-0 fs-5 text-warning">Bitcoin</h6>
+                        </div>
+                        <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#withdrawDetailsModal5">
+                          View Details
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Modals for Withdrawal Detail1 -->
+              <div class="modal fade" id="withdrawDetailsModal1" tabindex="-1" aria-labelledby="withdrawDetailsModal1Label" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="withdrawDetailsModal1Label">Tether USDT (ERC20) Details</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Minimum Withdrawable Amount: $500,000</p>
+                      <p>Maximum Withdrawable Amount: $1,000,000</p>
+                      <p>Charge Type: Percentage</p>
+                      <p>Charges Amount: 20%</p>
+                      <p>Duration: Instant</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-primary" onclick="proceedToForm('Tether USDT (ERC20)')">Request Withdrawal</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Modals for Withdrawal Detail2 -->
+              <div class="modal fade" id="withdrawDetailsModal2" tabindex="-2" aria-labelledby="withdrawDetailsModal2Label" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="withdrawDetailsModal2Label">Tether USDT (TRC20) Details</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Minimum Withdrawable Amount: $500,000</p>
+                      <p>Maximum Withdrawable Amount: $1,000,000</p>
+                      <p>Charge Type: Percentage</p>
+                      <p>Charges Amount: 20%</p>
+                      <p>Duration: Instant</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-secondary" onclick="proceedToForm('Tether USDT (TRC20)')">Request Withdrawal</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Modals for Withdrawal Detail3 -->
+              <div class="modal fade" id="withdrawDetailsModal3" tabindex="-3" aria-labelledby="withdrawDetailsModal1Label" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="withdrawDetailsModal3Label">Bank Details</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Minimum Withdrawable Amount: $500,000</p>
+                      <p>Maximum Withdrawable Amount: $1,000,000</p>
+                      <p>Charge Type: Percentage</p>
+                      <p>Charges Amount: 20%</p>
+                      <p>Duration: Instant</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-danger" onclick="proceedToForm('Bank Transfer')">Request Withdrawal</button>                    
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Modals for Withdrawal Detail4 -->
+              <div class="modal fade" id="withdrawDetailsModal4" tabindex="-4" aria-labelledby="withdrawDetailsModal4Label" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="withdrawDetailsModal4Label">Ethereum Details</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Minimum Withdrawable Amount: $500,000</p>
+                      <p>Maximum Withdrawable Amount: $1,000,000</p>
+                      <p>Charge Type: Percentage</p>
+                      <p>Charges Amount: 20%</p>
+                      <p>Duration: Instant</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-dark" onclick="proceedToForm('Ethereum')">Request Withdrawal</button>                    
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Modals for Withdrawal Details -->
+              <div class="modal fade" id="withdrawDetailsModal5" tabindex="-5" aria-labelledby="withdrawDetailsModal5Label" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="withdrawDetailsModal1Labe5">Bitcoin Details</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Minimum Withdrawable Amount: $500,000</p>
+                      <p>Maximum Withdrawable Amount: $1,000,000</p>
+                      <p>Charge Type: Percentage</p>
+                      <p>Charges Amount: 20%</p>
+                      <p>Duration: Instant</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-warning" onclick="proceedToForm('Bitcoin')">Request Withdrawal</button>                    
+                    </div>
+                  </div>
+                </div>
+              </div>             
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="py-6 px-6 text-center">
+      <p class="mb-0 fs-4">All Rights Reserved © Coinsafehub 2024</p>
+    </div>
+  </div>
+  <script>
+    function proceedToForm(paymentMethod) {
+  // Close the modal
+  const modal = bootstrap.Modal.getInstance(document.querySelector('.modal.show'));
+  modal.hide();
+
+  // Determine if additional details (e.g., bank info) are needed
+  const isBankTransfer = paymentMethod === 'Bank Transfer';
+
+  // Create the withdrawal form dynamically
+  const formContainer = document.createElement('div');
+  formContainer.innerHTML = `
+    <div class="container my-5">
+      <h3 class="text-center mb-4">Complete Your Withdrawal (${paymentMethod})</h3>
+      <form id="withdrawalForm" onsubmit="submitWithdrawal(event, '${paymentMethod}')">
+        <div class="mb-3">
+          <label for="amount" class="form-label">Amount</label>
+          <input type="number" class="form-control" id="amount" placeholder="Enter amount" required>
+        </div>
+        <div id="alertBox" class="alert alert-danger d-none" role="alert">
+          Please fill in all fields before proceeding!
+        </div>
+        <div id="successBox" class="alert alert-success d-none" role="alert">
+          Your withdrawal request has been submitted successfully!
+          <button class="btn btn-light btn-sm mt-2" onclick="redirectToDashboard()">Go to Dashboard</button>
+        </div>
+
+        ${
+          isBankTransfer
+            ? `
+        <div class="mb-3">
+          <label for="bankName" class="form-label">Bank Name</label>
+          <input type="text" class="form-control" id="bankName" placeholder="Enter bank name" required>
+        </div>
+        <div class="mb-3">
+          <label for="accountNumber" class="form-label">Account Number</label>
+          <input type="text" class="form-control" id="accountNumber" placeholder="Enter account number" required>
+        </div>
+        <div class="mb-3">
+          <label for="accountName" class="form-label">Account Name</label>
+          <input type="text" class="form-control" id="accountName" placeholder="Enter account name" required>
+        </div>
+        `
+            : `
+        <div class="mb-3">
+          <label for="wallet" class="form-label">Wallet Address</label>
+          <input type="text" class="form-control" id="wallet" placeholder="Enter wallet address" required>
+        </div>
+        `
+        }
+        <button type="submit" class="btn btn-primary w-100">Submit Request</button>
+      </form>
+    </div>
+  `;
+
+  // Replace the existing content with the form
+  document.body.innerHTML = '';
+  document.body.appendChild(formContainer);
+}
+
+function submitWithdrawal(event, paymentMethod) {
+  event.preventDefault();
+
+  // Get form data based on payment method
+  const amount = document.getElementById('amount').value;
+  let details = {};
+
+  if (paymentMethod === 'Bank Transfer') {
+    details = {
+      bankName: document.getElementById('bankName').value,
+      accountNumber: document.getElementById('accountNumber').value,
+      accountName: document.getElementById('accountName').value,
+    };
+  } else {
+    details = {
+      wallet: document.getElementById('wallet').value,
+    };
+  }
+
+  // Validate amount
+  if (amount < 500000 || amount > 1000000) {
+    alert('Amount must be between $500,000 and $1,000,000');
+    return;
+  }
+
+  // Simulate saving to the server
+  const requestData = {
+    paymentMethod,
+    amount,
+    ...details,
+    status: 'Pending',
+  };
+  console.log('Request Submitted:', requestData);
+
+  // Notify user of successful submission
+  alert(`Your ${paymentMethod} withdrawal request has been submitted and is pending approval.`);
+
+  // Redirect to dashboard or refresh page
+  window.location.reload();
+}
+function submitWithdrawal(event, paymentMethod) {
+  event.preventDefault();
+
+  // Get the form values
+  const amount = document.getElementById('amount').value;
+  let details = {};
+
+  const alertBox = document.getElementById('alertBox');
+  const successBox = document.getElementById('successBox');
+
+  if (paymentMethod === 'Bank Transfer') {
+    details = {
+      bankName: document.getElementById('bankName').value,
+      accountNumber: document.getElementById('accountNumber').value,
+      accountName: document.getElementById('accountName').value,
+    };
+
+    // Validate fields for Bank Transfer
+    if (!amount || !details.bankName || !details.accountNumber || !details.accountName) {
+      showAlert(alertBox, 'Please fill in all fields before proceeding!');
+      return;
+    }
+  } else {
+    details = {
+      wallet: document.getElementById('wallet').value,
+    };
+
+    // Validate fields for Wallet Payments
+    if (!amount || !details.wallet) {
+      showAlert(alertBox, 'Please fill in all fields before proceeding!');
+      return;
+    }
+  }
+
+  // Validate the amount
+  if (amount < 500000 || amount > 1000000) {
+    showAlert(alertBox, 'Amount must be between $500,000 and $1,000,000');
+    return;
+  }
+
+  // Simulate saving to the server
+  const requestData = {
+    paymentMethod,
+    amount,
+    ...details,
+    status: 'Pending',
+  };
+
+  // Show success alert with the dashboard button
+  showAlert(successBox, `Your ${paymentMethod} withdrawal request has been submitted successfully!`, 'success');
+}
+
+// Function to display an alert message
+function showAlert(alertElement, message, type = 'danger') {
+  // Hide other alerts
+  document.querySelectorAll('.alert').forEach(alert => {
+    alert.classList.add('d-none');
+  });
+
+  // Set the message and type
+  alertElement.textContent = message;
+  alertElement.className = `alert alert-${type}`;
+  alertElement.classList.remove('d-none');
+
+  // Auto-hide the alert after 5 seconds (only for error alerts)
+  if (type === 'danger') {
+    setTimeout(() => {
+      alertElement.classList.add('d-none');
+    }, 5000);
+  }
+}
+
+// Function to redirect to the dashboard
+function redirectToDashboard() {
+  window.location.href = './index.html'; // Replace with your dashboard URL
+}
+
+
+  </script>
+  <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/sidebarmenu.js"></script>
+  <script src="../assets/js/app.min.js"></script>
+  <script src="../assets/libs/simplebar/dist/simplebar.js"></script>
+  <!-- solar icons -->
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+</body>
+
+</html>

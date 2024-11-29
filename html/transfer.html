@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coinsafehub</title>
+  <link rel="stylesheet" href="../assets/css/styles.min.css" />
+</head>
+
+<body>
+  <!--  Body Wrapper -->
+  <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+    data-sidebar-position="fixed" data-header-position="fixed">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar">
+      <!-- Sidebar scroll-->
+      <div>
+        <div class="brand-logo d-flex align-items-center justify-content-between">
+          <a href="./index.html" class="text-nowrap logo-img">
+            <h4>Coinsafehub</h4>
+          </a>
+          <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+            <i class="ti ti-x fs-8"></i>
+          </div>
+        </div>
+        <!-- Sidebar navigation-->
+        <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+          <ul id="sidebarnav">
+            <li class="sidebar-item">
+            <a class="sidebar-link" href="./index.html" aria-expanded="false">
+              <iconify-icon icon="material-symbols:home-outline"></iconify-icon>
+              <span class="hide-menu">Home</span>
+            </a>
+            </li>
+            <li>
+              <span class="sidebar-divider lg"></span>
+            </li>
+            <li class="nav-small-cap">
+              <span class="hide-menu">TRADING</span>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./deposit.html" aria-expanded="false">
+                <iconify-icon icon="mdi:bank-transfer-in"></iconify-icon>
+                <span class="hide-menu">Deposit</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./withdraw.html" aria-expanded="false">
+                <iconify-icon icon="mdi:bank-transfer-out"></iconify-icon>
+                <span class="hide-menu">Withdrawal</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./transfer.html" aria-expanded="false">
+                <iconify-icon icon="mdi:send-circle-outline"></iconify-icon>
+                <span class="hide-menu">Transfer</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./wallet.html" aria-expanded="false">
+                <iconify-icon icon="mdi:wallet"></iconify-icon>
+                <span class="hide-menu">Connect Wallet</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./plans.html" aria-expanded="false">
+                <iconify-icon icon="mdi:clipboard-check-outline"></iconify-icon>
+                <span class="hide-menu">Plans</span>
+              </a>
+            </li>
+
+          </ul>
+        </nav> 
+        <!-- End Sidebar navigation -->
+      </div>
+      <!-- End Sidebar scroll-->
+    </aside>
+    <!--  Sidebar End -->
+    <!--  Main wrapper -->
+    <div class="body-wrapper">
+      <!--  Header Start -->
+      <header class="app-header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <ul class="navbar-nav">
+            <li class="nav-item d-block d-xl-none">
+              <a class="nav-link sidebartoggler " id="headerCollapse" href="javascript:void(0)">
+                <i class="ti ti-menu-2"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="javascript:void(0)">
+                <iconify-icon icon="solar:bell-linear" class="fs-6"></iconify-icon>
+                <div class="notification bg-primary rounded-circle"></div>
+              </a>
+            </li>
+          </ul>
+          <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
+            <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
+              <li class="nav-item dropdown">
+                <a class="nav-link " href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <img src="../assets/images/profile/user-1.jpg" alt="" width="35" height="35" class="rounded-circle">
+                </a>
+                <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
+                  <div class="message-body">
+                    <a href="./settings.html" class="d-flex align-items-center gap-2 dropdown-item">
+                      <i class="ti ti-user fs-6"></i>
+                      <p class="mb-0 fs-3">My Profile</p>
+                    </a>
+                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                      <i class="ti ti-mail fs-6"></i>
+                      <p class="mb-0 fs-3">My Account</p>
+                    </a>
+                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                      <i class="ti ti-list-check fs-6"></i>
+                      <p class="mb-0 fs-3">My Task</p>
+                    </a>
+                    <a href="./authentication-login.html" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!--  Header End -->
+      <div class="body-wrapper-inner">
+        <div class="container-fluid">
+          <div class="card">
+            <div class="card-body">
+              <div class="container my-5">
+                <h3 class="text-center mb-4">Transfer Funds</h3>
+                <div id="alertBox" class="alert alert-danger d-none" role="alert">
+                  Please fill in all fields before proceeding!
+                </div>
+                <div id="successBox" class="alert alert-success d-none" role="alert"></div>
+                <form id="transferForm" onsubmit="handleTransfer(event)">
+                  <div class="mb-3">
+                    <label for="transferAmount" class="form-label">Amount</label>
+                    <input type="number" id="transferAmount" class="form-control" placeholder="Enter amount" min="1" required />
+                  </div>
+                  <div class="mb-3">
+                    <label for="receiverDetails" class="form-label">Recipient Username/Email</label>
+                    <input type="text" id="receiverDetails" class="form-control" placeholder="Enter username or email" required />
+                  </div>
+                  <div class="mb-3">
+                    <label for="transferDescription" class="form-label">Description</label>
+                    <textarea id="transferDescription" class="form-control" rows="3" placeholder="Enter a description" required></textarea>
+                  </div>
+                  <p class="text-danger fw-bold">Note: 20% charge applies to the transaction.</p>
+                  <button type="submit" class="btn btn-primary w-100">Submit for Approval</button>
+                </form>
+              </div>
+              
+              <!-- PIN Modal -->
+              <div class="modal fade" id="pinModal" tabindex="-1" aria-labelledby="pinModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="pinModalLabel">Enter Your 4-Digit PIN</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="mb-3">
+                        <label for="pinCode" class="form-label">PIN Code</label>
+                        <input type="password" id="pinCode" class="form-control" maxlength="4" placeholder="Enter your 4-digit PIN" required />
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                      <button type="button" class="btn btn-primary" onclick="confirmTransfer()">Confirm</button>
+                    </div>
+                  </div>
+                </div>
+              </div>              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="py-6 px-6 text-center">
+      <p class="mb-0 fs-4">All Rights Reserved © Coinsafehub 2024</p>
+    </div>
+  </div>
+  <script>
+      function handleTransfer(event) {
+    event.preventDefault();
+
+    const amount = document.getElementById('transferAmount').value;
+    const receiverDetails = document.getElementById('receiverDetails').value;
+    const description = document.getElementById('transferDescription').value;
+
+    const alertBox = document.getElementById('alertBox');
+    const successBox = document.getElementById('successBox');
+
+    // Validate fields
+    if (!amount || !receiverDetails || !description) {
+      showAlert(alertBox, 'Please fill in all fields before proceeding!');
+      return;
+    }
+
+    if (amount <= 0) {
+      showAlert(alertBox, 'Enter a valid transfer amount!');
+      return;
+    }
+
+    // Open PIN Modal
+    const pinModal = new bootstrap.Modal(document.getElementById('pinModal'));
+    pinModal.show();
+  }
+
+  function confirmTransfer() {
+    const pinCode = document.getElementById('pinCode').value;
+    const successBox = document.getElementById('successBox');
+    const alertBox = document.getElementById('alertBox');
+
+    if (pinCode.length !== 4) {
+      showAlert(alertBox, 'Please enter a valid 4-digit PIN!');
+      return;
+    }
+
+    // Simulate submission for admin approval
+    const transferData = {
+      amount: document.getElementById('transferAmount').value,
+      receiver: document.getElementById('receiverDetails').value,
+      description: document.getElementById('transferDescription').value,
+      pin: pinCode,
+      status: 'Pending Approval',
+    };
+
+    // Show success alert
+    showAlert(
+      successBox,
+      `Transfer submitted successfully! Amount: $${transferData.amount}. Awaiting admin approval.`,
+      'success'
+    );
+
+    // Close PIN Modal
+    const pinModal = bootstrap.Modal.getInstance(document.getElementById('pinModal'));
+    pinModal.hide();
+
+    // Reset form
+    document.getElementById('transferForm').reset();
+  }
+
+  // Function to show alert messages
+  function showAlert(alertElement, message, type = 'danger') {
+    // Hide all alerts
+    document.querySelectorAll('.alert').forEach(alert => {
+      alert.classList.add('d-none');
+    });
+
+    // Set message and show alert
+    alertElement.textContent = message;
+    alertElement.className = `alert alert-${type}`;
+    alertElement.classList.remove('d-none');
+
+    // Auto-hide error alerts
+    if (type === 'danger') {
+      setTimeout(() => {
+        alertElement.classList.add('d-none');
+      }, 5000);
+    }
+  }
+  </script>
+  <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/sidebarmenu.js"></script>
+  <script src="../assets/js/app.min.js"></script>
+  <script src="../assets/libs/simplebar/dist/simplebar.js"></script>
+  <!-- solar icons -->
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+</body>
+
+</html>
